@@ -1,0 +1,187 @@
+.profiles-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #141414;
+  color: #fff;
+}
+
+.profiles-header {
+  width: 100%;
+  padding: 20px 4%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+}
+
+.profiles-logo {
+  height: 45px;
+}
+
+.profiles-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -100px;
+}
+
+.profiles-content h1 {
+  font-size: 3.5vw;
+  font-weight: 400;
+  margin-bottom: 2em;
+}
+
+.profiles-list {
+  display: flex;
+  gap: 2vw;
+  justify-content: center;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  width: 10vw;
+  min-width: 84px;
+  max-width: 200px;
+}
+
+.profile-avatar-wrapper {
+  border: 3px solid transparent;
+  border-radius: 4px;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+  width: 100%;
+  aspect-ratio: 1/1;
+  position: relative;
+}
+
+.profile-card:hover .profile-avatar-wrapper {
+  border-color: #fff;
+}
+
+.profile-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-name {
+  margin-top: 10px;
+  color: grey;
+  font-size: 1.3vw;
+  transition: color 0.2s;
+}
+
+.profile-card:hover .profile-name {
+  color: #fff;
+}
+
+.manage-profiles-btn {
+  margin-top: 3em;
+  background-color: transparent;
+  border: 1px solid grey;
+  color: grey;
+  padding: 0.5em 1.5em;
+  font-size: 1.2vw;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.manage-profiles-btn:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
+@media (max-width: 800px) {
+  .profiles-content h1 { font-size: 30px; }
+  .profile-name { font-size: 16px; }
+  .manage-profiles-btn { font-size: 14px; }
+  .profile-card { width: 100px; }
+  .profiles-list { flex-wrap: wrap; }
+}
+
+.profile-loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #141414;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.netflix-spinner {
+  width: 60px;
+  height: 60px;
+  border: 4px solid rgba(229, 9, 20, 0.3);
+  border-top: 4px solid #e50914;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.profile-avatar.editing {
+  opacity: 0.5;
+}
+
+.edit-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0,0,0,0.6);
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+.edit-icon {
+  font-size: 18px;
+}
+
+.manage-profiles-btn.done-btn {
+  background-color: white;
+  color: black;
+  border-color: white;
+  font-weight: bold;
+}
+
+.profile-name-edit {
+  margin-top: 10px;
+  background-color: transparent;
+  border: 1px solid grey;
+  color: white;
+  font-size: 1.3vw;
+  text-align: center;
+  width: 100%;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.profile-name-edit:focus {
+  outline: none;
+  border-color: white;
+}
+
+@media (max-width: 800px) {
+  .profile-name-edit {
+    font-size: 16px;
+  }
+}
