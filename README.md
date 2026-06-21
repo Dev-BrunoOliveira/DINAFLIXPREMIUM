@@ -1,73 +1,22 @@
-# React + TypeScript + Vite
+# Dinaflix Premium
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+O **Dinaflix Premium** é um projeto de estudo frontend que consiste no desenvolvimento de um clone da interface da Netflix. O objetivo principal do projeto é aplicar conceitos avançados de estilização, componentização e responsividade, recriando a experiência visual de uma das maiores plataformas de streaming do mundo.
 
-Currently, two official plugins are available:
+A aplicação conta com um design escuro (dark mode), navegação fluida por categorias, carrossel de títulos e um layout totalmente adaptável para diferentes tamanhos de tela.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+##  Tecnologias Utilizadas
 
-## React Compiler
+Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React / Next.js** - Estrutura principal para a criação e organização de componentes dinâmicos.
+- **TypeScript** - Tipagem estática para garantir a consistência do código e segurança no fluxo de dados.
+- **Tailwind CSS** - Framework CSS utilitário para estilização rápida, construção do layout em grid/flexbox e total responsividade.
+- **Lucide Icons / React Icons** - Iconografia utilizada para os botões de controle, navegação e ações da interface.
+- **Vercel** - Plataforma utilizada para hospedagem e deploy automatizado do projeto.
 
-## Expanding the ESLint configuration
+##  Funcionalidades e Detalhes da Interface
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **Interface Fiel à Netflix:** Layout dark premium com foco total na imersão do usuário através de capas e banners.
+- **Banner de Destaque:** Seção principal no topo da página exibindo o título em evidência com botões de ação ("Assistir" e "Mais Informações").
+- **Carrosséis de Categorias:** Linhas de títulos organizadas por gêneros ou tipos de conteúdo, com efeito de hover interativo nos cards.
+- **Responsividade Completa:** Interface otimizada para garantir uma excelente experiência visual tanto em desktops quanto em dispositivos móveis.
