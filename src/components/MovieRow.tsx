@@ -1,5 +1,5 @@
-import React, { useRef } from 'react';
-import './MovieRow.css';
+import { useRef } from "react";
+import "./MovieRow.css";
 
 interface MovieRowProps {
   title: string;
@@ -9,11 +9,14 @@ interface MovieRowProps {
 export default function MovieRow({ title, items }: MovieRowProps) {
   const rowRef = useRef<HTMLDivElement>(null);
 
-  const handleScroll = (direction: 'left' | 'right') => {
+  const handleScroll = (direction: "left" | "right") => {
     if (rowRef.current) {
       const { scrollLeft, clientWidth } = rowRef.current;
-      const scrollTo = direction === 'left' ? scrollLeft - clientWidth : scrollLeft + clientWidth;
-      rowRef.current.scrollTo({ left: scrollTo, behavior: 'smooth' });
+      const scrollTo =
+        direction === "left"
+          ? scrollLeft - clientWidth
+          : scrollLeft + clientWidth;
+      rowRef.current.scrollTo({ left: scrollTo, behavior: "smooth" });
     }
   };
 
@@ -21,7 +24,7 @@ export default function MovieRow({ title, items }: MovieRowProps) {
     <div className="movie-row-container">
       <h2>{title}</h2>
       <div className="movie-row-wrapper">
-        <div className="movie-row-left" onClick={() => handleScroll('left')}>
+        <div className="movie-row-left" onClick={() => handleScroll("left")}>
           <span>〈</span>
         </div>
         <div className="movie-row-list" ref={rowRef}>
@@ -48,7 +51,7 @@ export default function MovieRow({ title, items }: MovieRowProps) {
             </div>
           ))}
         </div>
-        <div className="movie-row-right" onClick={() => handleScroll('right')}>
+        <div className="movie-row-right" onClick={() => handleScroll("right")}>
           <span>〉</span>
         </div>
       </div>

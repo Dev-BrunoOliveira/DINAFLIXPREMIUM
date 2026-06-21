@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import TrailerModal from '../components/TrailerModal';
 import MovieRow from '../components/MovieRow';
 
