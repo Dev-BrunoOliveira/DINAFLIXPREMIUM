@@ -16,8 +16,10 @@ interface UserContextData {
 
 const defaultProfiles: UserProfile[] = [
   { id: '1', name: 'Bruno', avatar: '/IMG/LOGO/LOGOUSUARIO.png' },
-  { id: '2', name: 'Convidado', avatar: 'https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png' },
-  { id: '3', name: 'Infantil', avatar: 'https://mir-s3-cdn-cf.behance.net/project_modules/disp/84c20033850498.56ba69ac290ea.png' },
+  { id: '2', name: 'Larissa', avatar: '/IMG/LOGO/LOGODENGO.png' },
+  { id: '3', name: 'Convidado', avatar: 'https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png' },
+  { id: '4', name: 'Infantil', avatar: 'https://mir-s3-cdn-cf.behance.net/project_modules/disp/84c20033850498.56ba69ac290ea.png' },
+  
 ];
 
 const UserContext = createContext<UserContextData>({} as UserContextData);
