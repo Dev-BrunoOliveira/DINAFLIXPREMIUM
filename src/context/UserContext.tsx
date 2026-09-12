@@ -17,8 +17,10 @@ interface UserContextData {
 const defaultProfiles: UserProfile[] = [
   { id: '1', name: 'Bruno', avatar: '/IMG/LOGO/LOGOUSUARIO.png' },
   { id: '2', name: 'Larissa', avatar: '/IMG/LOGO/LOGODENGO.png' },
-  { id: '3', name: 'Convidado', avatar: 'https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png' },
-  { id: '4', name: 'Infantil', avatar: 'https://mir-s3-cdn-cf.behance.net/project_modules/disp/84c20033850498.56ba69ac290ea.png' },
+  { id: '3', name: 'Visita', avatar: 'https://i.pinimg.com/564x/d7/19/6a/d7196adc7c4f353d52235c5e6ed12e65.jpg' },
+  { id: '4', name: 'Convidado', avatar: 'https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png' },
+  { id: '5', name: 'Infantil', avatar: 'https://mir-s3-cdn-cf.behance.net/project_modules/disp/84c20033850498.56ba69ac290ea.png' },
+  
   
 ];
 
